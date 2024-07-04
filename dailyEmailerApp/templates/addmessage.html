@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}ADD MESSAGE{% endblock title %}
+
+{% block mainContent %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category, msg in messages %}
+  <div class="alert alert-{{category}} alert-dismissible fade show text-center" role="alert">
+    {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+<div class="text-center">
+    <h3> Add new message</h3>
+</div>
+
+<div class="card m-4 sticky-top">
+    <div class="card-body">
+        <form method="POST">
+          {{form.csrf_token }}
+          <div class="row g-3 mb-5">
+            <div class="col-sm-6">
+           
+                {{form.subject.label(class="form-label")}}
+                {{form.subject(class="form-control")}}
+            </div>
+          <div class="col-sm-6">
+            {{form.recieverMail.label(class="form-label")}}
+            {{form.recieverMail(class="form-control")}}
+          </div>
+          <div class="col-sm-6">
+            {{form.scheduleType.label(class="form-label" )}}
+            {{form.scheduleType(class="form-control", id='scheduleType')}}
+            
+          </div>
+          <div class="col-sm-6" id='schedule-on-input'>
+            {{form.scheduleOn.label(class="form-label",id="scheduleOnLevel")}}
+            <div id='scheduleOnInput'>
+              {{form.scheduleOn(class="form-control", disabled='')}}
+            </div>
+           
+          </div>
+          <div class="col-12">
+            {{form.message.label(class="form-label")}}
+            {{form.message(class="form-control")}}
+          </div>
+          <div class="text-center ">
+            {{form.submit(class="w-50 btn btn-outline-secondary btn-lg" )}}
+          </div>
+        </div>
+        </form>
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='body') }}
+    </div>
+  </div>
+{% endblock mainContent %}
+

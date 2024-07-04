@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}ADD HOST{% endblock title %}
+{% block mainContent %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category, msg in messages %}
+  <div class="alert alert-{{category}} alert-dismissible fade show text-center" role="alert">
+    {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+<div class="text-center">
+    <h3> Add New Host</h3>
+</div>
+
+<div class="card m-4">
+    <div class="card-body">
+        <form method="POST">
+          {{form.csrf_token }}
+          <div class="row g-3 mb-5">
+            <div class="col-sm-6">
+           
+                {{form.username.label(class="form-label")}}
+                {{form.username(class="form-control")}}
+            </div>
+          <div class="col-sm-6">
+            {{form.password.label(class="form-label")}}
+            {{form.password(class="form-control")}}
+          </div>
+          <div class="col-sm-6">
+            {{form.smtp_host.label(class="form-label")}}
+            {{form.smtp_host(class="form-control")}}
+          </div>
+          <div class="col-sm-6">
+            {{form.smtp_port.label(class="form-label")}}
+            {{form.smtp_port(class="form-control")}}
+          </div>
+          <div class="col-sm-6">
+            {{form.senderName.label(class="form-label")}}
+            {{form.senderName(class="form-control")}}
+          </div>
+          <div class="col-sm-6">
+            {{form.senderMail.label(class="form-label")}}
+            {{form.senderMail(class="form-control")}}
+          </div>
+
+          <div class="text-center ">
+            {{form.submit(class="w-50 btn btn-outline-secondary btn-lg" )}}
+          </div>
+        </div>
+        </form>
+    </div>
+  </div>
+{% endblock mainContent %}

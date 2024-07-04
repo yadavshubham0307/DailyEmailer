@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}MESSAGE{% endblock title %}
+{% block mainContent %}
+<div class="container px-1 py-1 sticky-top">
+  <h2 class="pb-2 border-bottom">Message</h2>
+    <div class="p-5  bg-body-tertiary rounded-3">
+        <div class="row g-0 text-center">
+            <div class="col-sm-6 col-md-8 text-start"> <b>To:</b> {{message.receiverMail}}</div>
+            <div class="col-6 col-md-4 text-end">
+              <a href="/message/{{message.messagesId}}/status-change"><button class="btn btn-{% if message.message_status %}success {% else %}secondary{% endif %} btn-sm stBtn" for="btn-check-outlined">
+                {% if message.message_status %}Active {% else %}Unactive{% endif %}</button></a>
+              <a href="/messages/custom"><i class="bi bi-fullscreen-exit" style="font-size: 20px;"></i></a>
+              <a href="/message/{{message.messagesId}}/delete"><i class="bi bi-trash3" style="font-size: 20px;"> </i></a>
+              <a href="/addmessage/re-edit/{{message.messagesId}}"><i class="bi bi-pencil-square" style="font-size: 20px;"></i></a> 
+             
+              </div>
+        </div>
+      <h4 class="text-body-emphasis mt-3">{{message.subject}}</h4>
+      <p class="col-lg-8 mx-auto fs-5 text-muted">
+        {{message.message|safe}}
+      </p>
+      <div class="d-inline-flex gap-2 mt-3">
+        <b>Schedule Type:</b> {{message.scheduleType}}{% if message.scheduleType != 'Daily' %} on {{message.scheduleOn}}{% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock mainContent %}

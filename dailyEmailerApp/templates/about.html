@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}ABOUT US{% endblock title %}
+{% block mainContent %}
+<div class="container px-1 py-1">
+    <h2 class="pb-2 border-bottom">About Us</h2>
+    <div class="container my-4">
+
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis  bg-body-tertiary">
+        <div class="col-lg-12 px-0">
+          <p class="lead">DailyEmailer is a pioneering tool developed by an individual with a passion for exploring the possibilities of automated email scheduling and management. Initially conceived as a learning project, DailyEmailer has grown into a robust solution designed to simplify the process of scheduling and sending multiple emails efficiently.</p>
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider mt-5 mb-5">
+      <div class="row featurette m-2">
+        <div class="col-md-4">
+            <img class="bd-placeholder-img bd-placeholder-img-sm featurette-image img-fluid mx-auto" width="350" height="350" src={{url_for('static',filename='images/misson1.png')}} role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+          </div>
+        <div class="col-md-8">
+            <div class="mt-2 class='about-field'">
+                <h2>Our Mission</h2>
+            
+                <p class="lead ">At Incretia, we believe in the power of technology to transform everyday tasks. Our mission is to empower individuals and businesses with tools that are intuitive, efficient, and reliable. We are driven by a passion for innovation and a commitment to delivering solutions that exceed expectations.</p>
+     
+                </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider mt-5 mb-5">
+
+      <div class="row featurette m-2">
+        <div class="col-md-8">
+            <div class="mt-2 class='about-field'">
+                <h2>Powered by Incretia</h2>
+            
+                <p class="lead ">DailyEmailer is proudly powered by Incretia, an emerging company dedicated to innovation in technology. While Incretia is in the early stages of team formation and establishment, our vision is clear: to turn innovative ideas into reality. Our motto, "It's not a dream, it's real," reflects our commitment to bringing practical, cutting-edge technologies to life.</p>
+     
+            </div>
+        </div>
+        <div class="col-md-4">
+          <img class="bd-placeholder-img bd-placeholder-img-sm featurette-image img-fluid mx-auto pt-5" width="350" height="350" src={{url_for('static',filename='images/incretia.png')}} role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+        </div>
+      </div>
+      <div class='row m-2'>
+        
+        <p class="lead ">Incretia aims to lead the way in developing realistic new technologies that make a meaningful impact. DailyEmailer is just the beginning of our journey towards creating tools that enhance productivity and streamline communication processes. With Incretia’s dedication to innovation and quality, we are poised to introduce more groundbreaking solutions in the future.</p>
+         
+    </div>
+        
+      <hr class="featurette-divider mt-5 mb-5">
+
+
+    <div class='row m-2'>
+      <h6>Disclaimer</h6>
+      <p class="lead ">Please be aware that DailyEmailer is intended for educational purposes. While it provides powerful features for managing and scheduling emails, users are advised to use the tool responsibly and understand that any use is at their own risk. We encourage users to explore and learn from the tool while adhering to ethical standards in email communication.</p>
+       
+  </div>
+
+    
+
+       
+    </div>
+    </div>
+
+</div>    
+
+{% endblock mainContent %}

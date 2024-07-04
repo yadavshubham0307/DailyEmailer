@@ -1,0 +1,154 @@
+
+
+body {
+    padding-bottom: 70px; /* Adjust according to the height of your footer */
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+   
+
+  }
+
+
+
+
+#main-text{
+    font-size: 20px;
+   
+}
+
+.form-signin{
+    max-width: 330px;
+    padding: 1rem;
+    margin: 6%;
+}
+
+.form-signup{
+    max-width: 700px;
+    padding: 1rem;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none; /* Remove underline on hover */
+  }
+
+.item-tile:hover{
+    background-color:  #e5e7e9;
+    border-radius: 2%;
+}
+  .feature-icon {
+    
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+  }
+  
+  .icon-square {
+  
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+  }
+  
+  .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+  .text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+  .text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+  
+  .card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+
+  .host-list li{
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .host-list li::before{ 
+  
+    position: absolute;
+    font-size: 35px;
+    left: -10px;
+    top: -11px;
+    content: "\00BB";
+  
+    } 
+  
+  .feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+ .stBtn{
+  margin-bottom: 2%;
+  margin-right: 1%;
+ }
+
+ .scrollable-container{
+  max-height: 370px;
+  overflow-y: auto;
+ }
+ .mmnav a{
+  color: rgb(105, 104, 104);
+  font-size: large;
+ }
+
+ .mmnav-active{
+   font-size: large;
+   background-color: #eceff3;
+   color: black;
+ }
+
+ .mmnav a:hover{
+  color: black;
+ }
+
+ .notfound {
+  margin-top: 10%;
+  text-align: center;
+  font-size: large;
+  font-size: 30px;
+  color: #b0b1b3; }
+
+ 
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+
+ .contact {
+    display: flex;
+    justify-content: center;  /*Horizontal centering */
+    align-items: center; /* Vertical centering */
+    
+    
+ }
+
+ .about-field p{
+  font-size: 18px;
+ }
+
+.footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+  }
+
+  

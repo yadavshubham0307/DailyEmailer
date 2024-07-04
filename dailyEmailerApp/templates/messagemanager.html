@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}MESSAGE MANAGER{% endblock title %}
+
+{% block mainContent %}
+<div class="container px-1 py-1 sticky-top">
+    <h2 class="pb-2 border-bottom">Message Manager</h2>
+    <div class="container my-4">
+       
+        <nav class="nav nav-pills nav-justified mmnav">
+            <a class="nav-link {% if log.LogType == 'sent' %}mmnav-active{% endif %}" aria-current="page" href="/message-manager/sent">Sent</a>
+            <a class="nav-link {% if log.LogType == 'pending' %}mmnav-active{% endif %}" href="/message-manager/pending">Pending</a>
+            <a class="nav-link {% if log.LogType == 'failed' %}mmnav-active{% endif %}" href="/message-manager/failed">Failed</a>
+          </nav>
+          <hr>
+        <div class="scrollable-container">
+            {% if log.History|length == 0 %}
+            <div class="notfound">
+                Data not found!
+            </div>
+            {% else %}
+            <table class="table table-hover text-center">
+                <thead class="">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">On</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for message in  log.History%}
+                  {% if message.scheduleOn|string != "" or log.LogType != 'pending' %}
+                  <tr>
+                    <th scope="row"><a href="/message/{{message.messagesId}}/view">{{message.messagesId}}</a></th>
+                    <td>{{message.receiverMail}}</td>
+                    <td>{{message.subject}}</td>
+                    <td>{{message.message|safe|truncate(15)}}</td>
+                    {% if log.LogType == 'pending' %}
+                    <td>{{message.scheduleOn}}</td>
+                    {% else %}
+                    <td>{{message.messageOn}}</td>
+                    {% endif %}
+                  </tr>
+                  {% endif %}
+                  {% endfor %}
+                 
+                
+                 
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+</div> 
+{% endblock mainContent %}

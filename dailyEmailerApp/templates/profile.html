@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}PROFILE{% endblock title %}
+
+{% block mainContent %}
+<div class="container px-1 py-1">
+    <h2 class="pb-2 border-bottom">Profile</h2>
+    <div class="container my-4">
+        <div class="bg-body-tertiary p-3 rounded">
+           
+          <div class="col-sm-5 py-5 mx-auto">
+           
+
+            
+            <ul class="fs-4 host-list mt-3">
+                 
+                <li><b>First Name : </b>{{profileData.user.firstName}}</li>  
+                <li><b>Last Name : </b>{{profileData.user.lastName}}</li> 
+                <li><b>Gender : </b>{{profileData.user.gender}}</li>  
+                <li><b>Username : </b>{{profileData.user.userName}}</li>
+                <li><b>Email : </b>{{profileData.user.userName}}</li>  
+                <li><b>Password : </b>********** <a href="forgot-password/verification/email"><i class="bi bi-pencil-square" style="font-size: 20px;"></i></a> </li> 
+                <li><b>Total Sent Message : </b>{{profileData.sentMsg}}</li>  
+                <li><b>Total Failed Mail : </b>{{profileData.faildMsg}}</li>  
+              </ul> 
+              
+
+             
+        </div>
+        </div>
+      </div>
+
+</div>    
+
+{% endblock mainContent %}

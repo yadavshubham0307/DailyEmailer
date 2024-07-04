@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}DASHBAORD{% endblock title %}
+
+{% block mainContent %}
+<div class="container">
+  <div class="container px-1 py-1">
+    <h2 class="pb-2 border-bottom">Dashboard</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="col d-flex flex-column align-items-start gap-2">
+        <h2 class="fw-bold text-body-emphasis"> Never miss a beat with our intuitive email alert system</h2>
+        <p class="text-body-secondary">Set up personalized notifications for daily, one-time, or custom delivery, complete with your choice of customized messages, and stay ahead of the curve effortlessly with our tailored updates.</p>
+        
+      </div>
+
+      <div class="col">
+        <div class="row row-cols-1 row-cols-sm-2 g-4">
+          <a class="item-tile" href="/message-manager/sent">
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-secondary fs-4 rounded-3 mt-2">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Message Manager</h4>
+              <p class="text-body-secondary">Streamline communication with Dailyemailer's Message Manager, effortlessly monitoring email status.</p>
+            </div>
+            </a>
+
+        <a class="item-tile" href="/hosts/custom">
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-secondary fs-4 rounded-3 mt-2">
+              <i class="bi bi-gear-fill"></i>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Custom Host</h4>
+            <p class="text-body-secondary">Empower your email communications with personalized hosting solutions tailored to your needs</p>
+            
+          </div>
+          </a>
+          <a class="item-tile" href="/messages/custom">
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-secondary fs-4 rounded-3 mt-2">
+                <i class="bi bi-envelope-arrow-down"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Custom Messages</h4>
+              <p class="text-body-secondary">Click to unveil the custom message section for personalized email creation and scheduling on Dailyemailer.</p>
+              
+            </div>
+          </a>
+
+
+          <a class="item-tile" href="/hosts/default">
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-secondary fs-4 rounded-3 mt-2">
+              <i class="bi bi-hdd"></i>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">Default Host</h4>
+            <p class="text-body-secondary">Simplify email management with Dailyemailer's default hosting for effortless delivery.</p>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock mainContent %}
